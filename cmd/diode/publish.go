@@ -146,7 +146,7 @@ func parsePorts(portStrings []string, mode int) ([]*config.Port, error) {
 			return nil, err
 		}
 		if mode == config.PrivatePublishedMode && len(v.Allowlist) == 0 {
-			err := fmt.Errorf("private port publishing reuquires providing at least one address")
+			err := fmt.Errorf("private port publishing requires providing at least one address")
 			return nil, err
 		}
 		// limit fleet address size when publish protected port
